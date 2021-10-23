@@ -9,5 +9,5 @@ export const MusicasGridContainer = styled.div`
 
   grid-column-gap: 20px;
   grid-row-gap: 40px;
-  margin-top: 24px;
+  margin-top: 12px;
 `;

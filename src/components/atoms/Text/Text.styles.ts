@@ -6,7 +6,6 @@ interface Props {
 
 export const TextContent = styled.div<Props>`
   grid-column: 4 / -2;
-  letter-spacing: 0.1em;
 
   color: ${({ variant }) => {
     switch (variant) {

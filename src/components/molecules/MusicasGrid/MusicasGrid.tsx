@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { IMusica } from "types/musica";
 
 // styles
 import Section from "components/atoms/Section";
@@ -6,7 +7,7 @@ import { MusicasGridContainer } from "./MusicasGrid.styles";
 import Musica from "components/atoms/Musica";
 
 interface Props {
-  musicas: string[];
+  musicas: IMusica[];
 }
 
 const MusicasGrid: FC<Props> = ({ musicas }) => {
@@ -14,7 +15,7 @@ const MusicasGrid: FC<Props> = ({ musicas }) => {
     <Section>
       <MusicasGridContainer>
         {musicas.map((item) => (
-          <Musica key={item} title="Nome da música" src={item} />
+          <Musica key={item.id} musica={item} />
         ))}
       </MusicasGridContainer>
     </Section>

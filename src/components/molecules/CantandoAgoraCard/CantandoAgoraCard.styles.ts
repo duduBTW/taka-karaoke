@@ -9,7 +9,7 @@ export const CantandoAgoraCardContainer = styled.div`
   border-radius: 32px;
 
   padding: 20px;
-  margin-top: 24px;
+  margin-top: 12px;
 
   display: grid;
   grid-template-columns: auto 1fr;
@@ -25,11 +25,22 @@ export const CardImage = styled.img`
   grid-area: image;
 
   width: 214px;
+  min-height: 214px;
+  max-height: 240px;
   height: 100%;
 
   object-fit: cover;
 
   border-radius: 22px;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    transition: opacity 0.2s ease;
+    opacity: 0.82;
+  }
 `;
 
 export const CardControls = styled.div`

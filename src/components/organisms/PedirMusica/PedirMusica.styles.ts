@@ -21,7 +21,9 @@ export const PedirMusicaContent = styled.div`
 
   cursor: pointer;
 
+  transition: color 0.2s ease;
   &:hover {
+    transition: color 0.2s ease;
     color: #808080;
   }
 `;
