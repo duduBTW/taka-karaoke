@@ -45,7 +45,7 @@ const CantandoAgoraCard: FC<Props> = ({ musica }) => {
               : `https://img.youtube.com/vi/${musica.id}/maxresdefault.jpg`
           }
         />
-        <CardControls>.</CardControls>
+        <CardControls></CardControls>
         <CardTitle>{musica.titulo.substring(0, 22)}</CardTitle>
       </CantandoAgoraCardContainer>
     </Section>

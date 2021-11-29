@@ -55,6 +55,15 @@ async function buscarMusicas(req: NextApiRequest, res: NextApiResponse) {
       console.error(err);
       return res.status(500).send({ error: JSON.stringify(err) });
     }
+  } else if (req.method === "DELETE") {
+    try {
+      return res
+        .status(200)
+        .send(await MusicaModel.findByIdAndDelete(req.query.id));
+    } catch (err) {
+      console.error(err);
+      return res.status(500).send({ error: JSON.stringify(err) });
+    }
   }
 }
 

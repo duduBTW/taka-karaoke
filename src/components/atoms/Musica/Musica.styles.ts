@@ -5,7 +5,7 @@ export const MusicaImage = styled.img`
   object-fit: cover;
 
   width: 100%;
-  height: 180px;
+  height: 140px;
 `;
 
 export const MusicaContainer = styled.div`
@@ -25,13 +25,13 @@ export const MusicaContainer = styled.div`
 
 export const MusicaLabel = styled.div`
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 
   letter-spacing: 0.1em;
 
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.82);
 `;
 
 export const MusicaExcluir = styled.div`

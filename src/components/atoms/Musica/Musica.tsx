@@ -18,7 +18,7 @@ interface Props {
 const Musica: FC<Props> = ({ musica }) => {
   const { id, titulo, thumbnail } = musica;
 
-  const { setMusicaAtiva } = useMusicas();
+  const { setMusicaAtiva, deleteMusica } = useMusicas();
   const [sdefImage, setDefImage] = useState(false);
   const [sExcluir, setSExcluir] = useState(false);
 
@@ -40,7 +40,17 @@ const Musica: FC<Props> = ({ musica }) => {
       onMouseLeave={() => setSExcluir(false)}
       onClick={() => setMusicaAtiva(musica)}
     >
-      {sExcluir && <MusicaExcluir>Excluir</MusicaExcluir>}
+      {sExcluir && (
+        <MusicaExcluir
+          onClick={(e) => {
+            e.stopPropagation();
+
+            deleteMusica(musica);
+          }}
+        >
+          Excluir
+        </MusicaExcluir>
+      )}
       <MusicaImage
         alt={`Imagem ${titulo}`}
         src={

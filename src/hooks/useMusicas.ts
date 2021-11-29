@@ -23,10 +23,24 @@ export const useMusicasProvider = (): IUseMusica => {
     setMusicaAtiva(musica);
   };
 
+  const deleteMusica = (musica: IMusica) => {
+    if (musicas && musica._id) {
+      axios.delete(`/api/musicas?id=${musica._id}`);
+
+      mutate(
+        musicas.filter((m) => m._id !== musica._id),
+        false
+      );
+    } else {
+      console.error("`_id` não encontrado");
+    }
+  };
+
   const setList = useMemo(
     () => musicas?.filter((musica) => musica.jaCantado),
     [musicas]
   );
+
   const proximo = useMemo(
     () => musicas?.filter((musica) => !musica.jaCantado),
     [musicas]
@@ -39,5 +53,6 @@ export const useMusicasProvider = (): IUseMusica => {
 
     setMusicaAtiva: _setMusicaAtiva,
     musicaAtiva,
+    deleteMusica,
   };
 };

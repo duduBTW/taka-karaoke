@@ -8,13 +8,13 @@ export const CantandoAgoraCardContainer = styled.div`
   box-sizing: border-box;
   border-radius: 32px;
 
-  padding: 20px;
+  padding: 22px;
   margin-top: 12px;
 
   display: grid;
   grid-template-columns: auto 1fr;
 
-  grid-column-gap: 40px;
+  grid-column-gap: 20px;
 
   grid-template-areas:
     "image controls"
@@ -24,10 +24,8 @@ export const CantandoAgoraCardContainer = styled.div`
 export const CardImage = styled.img`
   grid-area: image;
 
-  width: 214px;
-  min-height: 214px;
-  max-height: 240px;
-  height: 100%;
+  width: 244px;
+  height: 140px;
 
   object-fit: cover;
 
@@ -55,8 +53,8 @@ export const CardTitle = styled.div`
 
   font-style: normal;
   font-weight: 300;
-  font-size: 68px;
-  line-height: 98px;
+  font-size: 58px;
+  line-height: 58px;
   letter-spacing: 0.1em;
 
   color: #ffffff;
